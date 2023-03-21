@@ -1,5 +1,6 @@
 import "./App.css";
-import DessertsList from "./DessertsList";
+import DessertsList from "./components/DessertsList";
+import ToDos from "./components/ToDos";
 
 const desserts = [
   {
@@ -27,8 +28,13 @@ const desserts = [
 function App() {
   return (
     <div className="App">
-      <h2>List of low calorie desserts:</h2>
-      <DessertsList data={desserts}/>
+      <div>
+        <h2>List of low calorie desserts:</h2>
+        <DessertsList data={desserts}/>
+      </div>
+      <div>
+        <ToDos />
+      </div>
     </div>
   );
 }
