@@ -1,5 +1,6 @@
 import "./App.css";
 import DessertsList from "./components/DessertsList";
+import Form from "./components/Form";
 import ToDos from "./components/ToDos";
 
 const desserts = [
@@ -35,6 +36,8 @@ function App() {
       <div>
         <ToDos />
       </div>
+      <br />
+      <Form />
     </div>
   );
 }
