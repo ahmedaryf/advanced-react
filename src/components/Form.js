@@ -1,12 +1,14 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 
 const Form = () => { 
     const [value, setValue] = useState("");
     const inputRef = useRef(null);
 
-    const focusInput = () => {
+    useEffect(() => {
         inputRef.current.focus();
-    }
+    })
+
+ 
     const onChange = (event) => {
         setValue(event.target.value);
     }
