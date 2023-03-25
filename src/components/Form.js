@@ -1,8 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 
 const Form = () => { 
     const [value, setValue] = useState("");
+    const inputRef = useRef(null);
 
+    const focusInput = () => {
+        inputRef.current.focus();
+    }
     const onChange = (event) => {
         setValue(event.target.value);
     }
@@ -12,9 +16,10 @@ const Form = () => {
    
     return ( 
         <div>
-            <form onSubmit={onSubmit}> 
+            <form onSubmit={onSubmit} > 
                 <label>Input Field</label>
-                <input value={value} onChange={onChange} type="text" placeholder='Type text here'/> 
+                <input ref={inputRef} value={value} onChange={onChange} type="text" placeholder='Type text here'/> 
+               
             </form> 
             <h2>{value}</h2>
         </div>

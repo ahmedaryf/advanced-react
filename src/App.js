@@ -1,7 +1,9 @@
 import "./App.css";
 import DessertsList from "./components/DessertsList";
 import Form from "./components/Form";
+import Timer from "./components/Timer";
 import ToDos from "./components/ToDos";
+import UserForm from "./components/UserForm";
 
 const desserts = [
   {
@@ -38,7 +40,12 @@ function App() {
       </div>
       <br />
       <Form />
+      <br />
+      <Timer />
+      <br />
+      <UserForm />
     </div>
+   
   );
 }
 
