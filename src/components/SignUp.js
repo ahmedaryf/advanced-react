@@ -21,7 +21,7 @@ function SignUp() {
 
   const getIsFormValid = () => {
     // Implement this function
-    if(!firstName || !lastName || !email || !password.value){
+    if(!firstName || !lastName || !validateEmail(email) || !password.value){
        return false;
     }
     return true;
