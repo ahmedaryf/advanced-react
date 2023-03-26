@@ -2,6 +2,7 @@ import "./App.css";
 import DessertsList from "./components/DessertsList";
 import Form from "./components/Form";
 import SignUp from "./components/SignUp";
+import SignUpFixed from "./components/SignUpFixed";
 import Timer from "./components/Timer";
 import ToDos from "./components/ToDos";
 import UserForm from "./components/UserForm";
@@ -47,6 +48,9 @@ function App() {
       <UserForm />
       <br />
       <SignUp />
+      <br />
+      <br />
+      <SignUpFixed />
     </div>
    
   );

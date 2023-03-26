@@ -18,10 +18,11 @@ function SignUp() {
   });
   
   const [role, setRole] = useState("role");
+  
 
   const getIsFormValid = () => {
     // Implement this function
-    if(!firstName || !lastName || !validateEmail(email) || !password.value){
+    if(!firstName  || !validateEmail(email) || !password.value || password.value.length <8 || role === 'role'){
        return false;
     }
     return true;
@@ -29,6 +30,14 @@ function SignUp() {
 
   const clearForm = () => {
     // Implement this function
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword({
+        value: "",
+        isTouched: false
+    });
+    setRole('role')
   };
 
   const handleSubmit = (e) => {
@@ -62,15 +71,15 @@ function SignUp() {
             <label>
               Password <sup>*</sup>
             </label>
-            <input value={password.value} onChange={(e) => setPassword({value: e.target.value})} type='password' placeholder="Password" />
+            <input onBlur={() => setPassword({...password, isTouched: true})} value={password.value} onChange={(e) => setPassword({...password, value: e.target.value })}  type='' placeholder="Password" />
             {/* <h3>{password.value.length >=1 && password.value.length <6 ? PasswordErrorMessage() : ''}</h3> */}
-            <h3>{password.isTouched === true ? PasswordErrorMessage() : ''}</h3>
+            <h3>{password.isTouched && password.value.length <8 ? (<PasswordErrorMessage />): null}</h3>
           </div>
           <div className="Field">
             <label>
               Role <sup>*</sup>
             </label>
-            <select>
+            <select value={role} onChange={(e) => setRole(e.target.value)}>
               <option value="role">Role</option>
               <option value='individual'>Individual</option>
               <option value="business">Business</option>
