@@ -1,6 +1,7 @@
 import "./App.css";
 import DessertsList from "./components/DessertsList";
 import Form from "./components/Form";
+import SignUp from "./components/SignUp";
 import Timer from "./components/Timer";
 import ToDos from "./components/ToDos";
 import UserForm from "./components/UserForm";
@@ -44,6 +45,8 @@ function App() {
       <Timer />
       <br />
       <UserForm />
+      <br />
+      <SignUp />
     </div>
    
   );
