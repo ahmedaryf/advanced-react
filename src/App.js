@@ -5,6 +5,7 @@ import SignUp from "./components/SignUp";
 import SignUpFixed from "./components/SignUpFixed";
 import Timer from "./components/Timer";
 import ToDos from "./components/ToDos";
+import UncontrolledInput from "./components/UncontrolledInput";
 import UserForm from "./components/UserForm";
 
 const desserts = [
@@ -51,6 +52,8 @@ function App() {
       <br />
       <br />
       <SignUpFixed />
+      <br />
+      <UncontrolledInput />
     </div>
    
   );
