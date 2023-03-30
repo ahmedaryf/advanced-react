@@ -1,8 +1,11 @@
 import "./App.css";
+import DarkTheme from "./components/DarkTheme";
 import DessertsList from "./components/DessertsList";
 import Form from "./components/Form";
+import MyApp from "./components/MyApp";
 import SignUp from "./components/SignUp";
 import SignUpFixed from "./components/SignUpFixed";
+import { Parent } from "./components/TestContext";
 import Timer from "./components/Timer";
 import ToDos from "./components/ToDos";
 import UncontrolledInput from "./components/UncontrolledInput";
@@ -40,20 +43,32 @@ function App() {
       </div>
       <div>
         <ToDos />
-      </div>
-      <br />
-      <Form />
-      <br />
-      <Timer />
-      <br />
-      <UserForm />
-      <br />
-      <SignUp />
-      <br />
-      <br />
-      <SignUpFixed />
-      <br />
-      <UncontrolledInput />
+        </div>
+        <br />
+        <Form />
+        <br />
+        <Timer />
+        <br />
+        <UserForm />
+        <br />
+        <SignUp />
+        <br />
+        <br />
+        <SignUpFixed />
+        <br />
+        <UncontrolledInput />
+        <br />
+        <MyApp />
+        <br />
+        <hr />
+        <DarkTheme />
+        <br />
+        <hr />
+        <Parent />
+
+
+
+
     </div>
    
   );

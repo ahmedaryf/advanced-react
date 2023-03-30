@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, } from "react";
 
 function UncontrolledInput() {
   const inputRef = useRef(null);
@@ -6,6 +6,7 @@ function UncontrolledInput() {
   function handleClick() {
     const inputValue = inputRef.current.value;
     console.log(inputValue);
+    
   }
 
   return (
@@ -13,6 +14,7 @@ function UncontrolledInput() {
         <h5>Uncontrolled Input</h5>
       <input type="text" ref={inputRef} />
       <button type="submit" onClick={handleClick}>Get Value</button>
+      
     </div>
   );
 }
