@@ -17,6 +17,7 @@ import Timer from "./components/Timer";
 import ToDos from "./components/ToDos";
 import UncontrolledInput from "./components/UncontrolledInput";
 import UseEffect from "./components/UseEffect";
+import { UseReducerPr } from "./components/UseReducer_pr";
 import UseRefHook from "./components/useRefHook";
 import UserForm from "./components/UserForm";
 import UserInfo from "./components/UserInfo";
@@ -104,6 +105,9 @@ function App() {
         <br />
         <hr />
         <Radio />
+        <hr/>
+        <br />
+        <UseReducerPr />
 
 
     </div>

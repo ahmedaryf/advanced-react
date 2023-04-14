@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function Radio() {
   const [selected, setSelected] = useState("");
-  console.log(selected)
+  
   return (
     <div className="Radio">
       <h2>How did you hear about Little Lemon?</h2>
@@ -14,7 +14,7 @@ function Radio() {
         <RadioOption value="advertising">Advertising</RadioOption>
         <RadioOption value="other">Other</RadioOption>
       </RadioGroup>
-      <button disabled={!selected}>Submit</button>
+      <button disabled={!selected} onClick={() => console.log(selected)}>Submit</button>
     </div>
   );
 }
