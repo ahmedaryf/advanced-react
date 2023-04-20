@@ -1,22 +1,21 @@
 import React, { useReducer } from 'react'
 
 const reducer = (state, action) => {
-  if(action.type === "write") return ({...state,text: action.payload})
-  if(action.type === "add") return ({...state,count: state.count + 10})
-
-
+  if(action.type === "write") return ({...state, text: action.payload});
+  if(action.type === "add") return ({...state, count: state.count + 1})
+  if(action.type === "remove") return ({...state, count: state.count - 1})
 }
 
 export function UseReducerPr() {
-  const initialValue = {text: "", count: 0};
-  const [state, dispatch] = useReducer(reducer, initialValue);
+  const [state, dispatch] = useReducer(reducer, {text: "", count: 0})
   return (
     <div>
-      <h1>UserReducer function</h1>
+      <h1>UseReducer Function</h1>
       <h2>{state.text}</h2>
-      <h2>{state.count}</h2>
-      <input type='text' onChange={(e) => dispatch({type: "write", payload: e.currentTarget.value})}/>
-      <button disabled={state.count >= 200} onClick={() =>  dispatch({type: "add"})}>Add</button>
+      <input type='text' onChange={(event) => dispatch({type: "write", payload: event.target.value})} /> <br /><hr />
+      <button onClick={()=> dispatch({type: "add"})}>Add</button>
+      <button disabled={state.count <= 0} onClick={()=> dispatch({type: "remove"})}>Remove</button>
+      <h3>Count: {state.count}</h3>
     </div>
   )
 }

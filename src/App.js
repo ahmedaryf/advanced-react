@@ -58,9 +58,9 @@ function App() {
         <ToDos />
         </div>
         <br />
-        {/* <Form /> */}
+        <Form />
         <br />
-        {/* <Timer /> */}
+        <Timer />
         <br />
         <UserForm />
         <br />
